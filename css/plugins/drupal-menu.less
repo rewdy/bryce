@@ -2,46 +2,37 @@
 
 // main menu
 nav#main-menu {
-	color:@menulinkcolor;
-	margin:0;
-	padding:0;
-	&.row {
-		background-color:@menubackgroundcolor;
-	}
-	&:after{
-		.clearfixafter;
+	background-color:@menubackgroundcolor;
+	border-bottom:1px solid @linecolor;
+	h2 {
+		display:none;
 	}
 	ul.menu {
 		margin:0;
 		padding:0;
+		text-align:center;
 		li {
 			margin:0;
 			padding:0;
-			list-style:none;
 			display:inline;
+			list-style:none;
 			a {
 				display:inline-block;
-				padding:0.6em 0.7em;
-				color:@menulinkcolor;
-				font-family:@sans;
-				font-size:1.3em;
-				font-weight:normal;
+				margin:0 0.1em;
+				padding:0.85em 1.15em;
+				color:lighten(@color, 40%);
+				font-size:1.1em;
+				font-weight:300;
 				text-decoration:none;
-				@media only screen and (max-width: @breakpoint2) {
-					display:block;
-					padding:0.5em;
-				}
 				&:hover {
-					color:@menulinkhover;
+					color:@linkhover;
 				}
 				&.active {
-					font-weight:bold;
+					font-weight:600;
+					color:@color;
 				}
 			}
 		}
-	}
-	h2 {
-		display:none;
 	}
 }
 

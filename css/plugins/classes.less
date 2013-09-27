@@ -1,68 +1,29 @@
 /* Classes */
+.attn {
+	font-size:1.25em;
+	line-height:1.7em;
+	font-weight:200;
+}
+p.attn {
+	font-style:italic;
+	.light;
+}
+.small {
+	font-size:0.8em;
+}
 .light {
-	color:lighten(@color, 30%);
+	color:lighten(@color, 40%);
 }
-.accent {
-	color:@accent;
-}
-.tag {
-	display:inline-block;
-	padding:0 0.4em;
-	background-color:@pop;
-	color:#fff;	
-	border-radius:0.2em;
-	font-family:@sans;
-	font-weight:normal;
-}
-h2 .tag {
-	font-size:0.6em;
-	line-height:1.5em;
-	position:relative;
-	bottom:0.1em;
-	.textshadow;
-}
-
-/* Alignment */
 .right {
 	text-align:right;
-	@media only screen and (max-width: @breakpoint2) {
-		text-align:left;
-	}
-}	
+}
 .left {
 	text-align:left;
 }
 .center {
 	text-align:center;
 }
-img.right,
-img.left {
-	text-align:center;
-	position:relative;
-	top:0.4em;
-}
-img.right {
-	float:right;
-	margin:0 0 0.5em 1em;
-}
-img.left {
-	float:left;
-	margin:0 1em 0.5em 0;
-}
-.fright {
-	float:right;	
-}
-.fleft{
-	float:left;	
-}
 
-.listed {
-	margin-bottom:2em;
-	padding-bottom:1em;
-	border-bottom:1px solid @linecolor;	
-}
-
-/* List styles */
 ul.lined,
 ol.lined {
 	border-top: 1px solid #ddd;
@@ -80,48 +41,22 @@ ol.lined li {
 	border-bottom:1px solid #ddd;
 }
 
-ul.blocked li {
-	list-style:none;
-	margin-left:0;
-}
-ol.blocked li {
-	list-style-position:inside;
-	margin-left:0;
-}
-ul.blocked li ul li {
-	margin-left:2em;
+i.space {
+	margin-right:0.5em;
 }
 
-ul.inline li {
-	display:inline;
-	list-style:none;
-	margin:0 1em 0 0;
-	padding:0;
+img.right {
+	float: right;
+	margin: 0 0 0.5em 0.5em;
+	text-align: center;
 }
-
-ul.spaced li,
-ol.spaced li {
-	margin-bottom:1em; // this matches the bottom margin of other block elements.
+img.left {
+	float: left;
+	margin: 0 0.5em 0.5em 0;
+	text-align: center;
 }
-
 table.narrow {
 	width: auto;
-}
-
-.dark_box {
-	padding:1em 1.5em;
-	background-color:@color;
-	color:#fff;
-}
-.dark_box a {
-	color:@lighttext;
-}
-.dark_box h2 {
-	border-bottom:none;
-}
-
-.sans {
-	font-family:@fontdisplay;
 }
 
 .hide {
@@ -138,7 +73,7 @@ table.narrow {
 	box-shadow:inset 0 0 0.5em rgba(0,0,0,0.1);
 }
 .transition {
-	-webkit-transition:all 0.2s ease-in;
-	-moz-transition:all 0.2s ease-in;
-	transition:all 0.2s ease-in;
+	-webkit-transition:all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in;
+	transition:all 0.5s ease-in;
 }

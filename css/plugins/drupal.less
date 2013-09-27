@@ -1,21 +1,9 @@
 /* Drupal Stuff */
 
-// remove these classes before finished
-.drupal-region {
-	background-color:#ffffcc;
-	border:1px solid darken(#ffffcc, 45%);
-	color:#999;
-	padding:5px;
-	font-size:0.8em;
-}
-.drupal-region:hover {
-	box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
 // alerts and messages
-@statuscolor: #d5edaf;
-@warningcolor: #fdf9be;
-@errorcolor: #fdbec2;
+@statuscolor: #b5edc6;
+@warningcolor: #fdf0b8;
+@errorcolor: #fdcfbe;
 .status, .warning, .error, .messages {
 	position:relative;
 	display:block;
@@ -210,7 +198,6 @@ ul.pager {
 			padding:0.25em 0.75em;
 			background-color:@lightaccent;
 			color:@color;
-			.sans;
 			font-size:1em;
 			line-height:@lineheight;
 			font-weight:400;
@@ -289,3 +276,13 @@ form#search-block-form .container-inline input.form-submit{
 	.transition;
 }
 
+/* Override Admin Menu */
+#admin-menu {
+	background:#222;
+	font-family:'Helvetica Neue', sans-serif;
+	font-size:15px;
+	font-weight:300;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}

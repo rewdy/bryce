@@ -82,18 +82,18 @@
 		<?php endif; ?>
 
 		<header id="site_header" class="row style-simple-center">
-			<div class="grid">
-				<div class="full center">
+			<div class="flip_area">
+				<a id="card" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
 					<?php $title_tag = ($title) ? 'div' : 'h1'; ?>
-					<<?php echo $title_tag; ?> id="site-title">
-						<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-							<?php if ($logo): ?><span id="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></span><?php endif; ?>
+					<<?php echo $title_tag; ?> id="site_title" class="face front">
+						<?php if ($logo): ?><span id="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></span><?php endif; ?>
 
-							<span id="site-title-text"><?php print $site_name; ?></span>
-						</a>
+						<span id="site-title-text"><?php print $site_name; ?></span>
 					</<?php echo $title_tag; ?>>
-				</div>
+					<span class="face back"><i class="icon-home space"></i> home</span>
+				</a>
 			</div>
+
 		</header>
 
 		<?php if ($main_menu): ?>
@@ -181,4 +181,18 @@
 		</div>
 	</div> <!-- close #wrapper -->
 
-	<?php include "parts/part-footer.php"; ?>
+	<?php if ($page['prefoot']) : ?>
+	<div id="prefoot">
+		<div class="grid">
+			<?php print render($page['prefoot']); ?>
+		</div> <!-- close .grid.row -->
+	</div>
+	<?php endif; ?>
+
+	<footer class="row">
+		<div class="grid">
+			<?php if ($page['footer']) : ?>
+				<?php print render($page['footer']); ?>
+			<?php endif; ?>
+		</div> <!-- close .grid -->
+	</footer>
