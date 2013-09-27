@@ -97,6 +97,7 @@
 		</header>
 
 		<?php if ($main_menu): ?>
+		
 		<nav id="main-menu" class="row">
 			<div class="grid">
 				<div class="full center">
@@ -104,6 +105,7 @@
 				</div>
 			</div>
 		</nav> <!-- /nav#main-menu -->
+		<?php endif;?>
 
 		<?php if ($page['splash_area']): ?>
 
