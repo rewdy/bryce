@@ -1,0 +1,126 @@
+/*
+
+Stylesheet
+----------
+
+Project:	Walnut Creek Church Network Site Design
+Date:		07/2013
+
+----------
+
+Table of Contents
+-----------------
+
+1. Core
+2. Layout
+3. Module
+4. Theme
+5. State
+
+----------
+
+Directions: Use either the drupal prefixed plugins or the no prefix plugins. Don't use both
+as there is a lot of overlap between the two.
+
+----------
+
+*/
+
+@background: #fff;
+@footer: #3c3c3c;
+
+@color: #333;
+@lighttext: #999; // ?
+
+@accent: #d4443f;
+@pop: #00a99c;
+@lightaccent: #f2f2f2;
+@linecolor: #ddd;
+
+@linkcolor: @accent;
+@linkhover: #000;
+
+@selection: @pop;
+
+@font: "freight-text-pro", Georgia, serif;
+@fontdisplay: "freight-sans-pro", sans-serif;
+@sans: @fontdisplay;
+@size: 1em;
+@fontScale: 1.5; // Used for line-height, margin, etc.
+@lineheight:unit(@fontScale, em);
+@headingDeepest: 6; // Should remain 6 or fewer.
+@headingMultiplier: 1.18;
+
+@menubackgroundcolor: #eee;
+@menulinkcolor: #666;
+@menulinkhover: @accent;
+@menuline: @linecolor;
+@menulighthover: #f2f2f2;
+
+@maxwidth: 1000px;
+@minwidth: 330px;
+@breakpoint1: 58em; // about 800px ~tablets
+@breakpoint2: 40em; // about 640px ~mobile landscape
+@breakpoint: @breakpoint2;
+
+/*
+1. Core
+-------
+*/
+
+// pull in core, type, and form plugins
+@import "plugins/core.less";
+@import "plugins/type.less";
+
+body {
+	padding:1em;
+	background-color:@background;
+	color:@color;
+}
+
+/*
+2. Layout
+---------
+*/
+
+
+/*
+3. Module
+---------
+*/
+
+// pull in the various module plugins
+@import "plugins/drupal";
+
+/*
+4. Theme
+--------
+*/
+
+// Basic for image layout
+img {
+	max-width:100%;
+	height:auto;
+}
+
+
+/*
+5. State
+--------
+*/
+
+// pull in classes
+@import "plugins/classes.less";
+
+/* Clearfixed styles to be included elsewhere. */
+.clearfixed {
+	content: " ";
+	display: block;
+	clear: left;
+	height: 0;
+	overflow: hidden;
+}
+
+.clearfix:after {
+	.clearfixed;
+}

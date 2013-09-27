@@ -1,0 +1,53 @@
+name = Bryce
+description = Simple theme for Rewdy.com and you.
+version = v. 1
+core = 7.x
+engine = phptemplate
+
+
+; STYLESHEETS
+stylesheets[all][] = css/style.css
+stylesheets[all][] = font/font-awesome-plus.css
+
+; SCRIPTS
+scripts[] = js/global.js
+
+; REGIONS
+;-- Primary Regions
+regions[preamble] = Preamble
+;regions[header] = Header
+regions[content] = Content
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+
+;-- Footer Region
+regions[footer] = Footer
+
+;-- Secondary Regions
+regions[prefoot] = Prefooter 
+
+;-- Supporter Regions
+regions[splash_area] = Spash Area
+regions[highlight] = Highlighted
+regions[messages] = Messages Region
+regions[help] = Help Region
+
+
+; FEATURES
+features[] = logo
+features[] = name
+;features[] = slogan
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+;features[] = node_user_picture
+features[] = comment_user_picture
+
+
+; DEFAULT SETTINGS
+settings[bryce_google_analytics] = 0
+settings[bryce_layout_breadcrumbs] = 0
+settings[bryce_layout_sidebar_first] = 3
+settings[bryce_layout_sidebar_second] = 3
+settings[bryce_layout_front_sidebar_first] = 4
+settings[bryce_layout_front_sidebar_second] = 4

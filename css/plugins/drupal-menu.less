@@ -1,0 +1,99 @@
+/* Drupal Menu Styles */
+
+// main menu
+nav#main-menu {
+	color:@menulinkcolor;
+	margin:0;
+	padding:0;
+	&.row {
+		background-color:@menubackgroundcolor;
+	}
+	&:after{
+		.clearfixafter;
+	}
+	ul.menu {
+		margin:0;
+		padding:0;
+		li {
+			margin:0;
+			padding:0;
+			list-style:none;
+			display:inline;
+			a {
+				display:inline-block;
+				padding:0.6em 0.7em;
+				color:@menulinkcolor;
+				font-family:@sans;
+				font-size:1.3em;
+				font-weight:normal;
+				text-decoration:none;
+				@media only screen and (max-width: @breakpoint2) {
+					display:block;
+					padding:0.5em;
+				}
+				&:hover {
+					color:@menulinkhover;
+				}
+				&.active {
+					font-weight:bold;
+				}
+			}
+		}
+	}
+	h2 {
+		display:none;
+	}
+}
+
+// sidebar menus
+.sidebar ul.menu {
+	margin:0 0 1em 0;
+	padding:0;
+	border-top:1px solid @menuline;
+}
+.sidebar ul.menu li {
+	list-style:none;
+	margin:0;
+	padding:0;
+	border-bottom:1px solid @menuline;
+}
+.sidebar ul.menu li a {
+	display:block;
+	padding:0.2em;
+	text-decoration: none;
+	&:hover {
+		background-color:@menulighthover;
+	}
+	&.active-trail {
+		font-weight: bold;
+	}
+}
+
+.sidebar ul.menu li ul {
+	padding-left:1em;
+	margin:0;
+	font-size:0.8em;
+}
+.sidebar ul.menu li ul li.last {
+	border-bottom:0 none;
+}
+
+.inline ul.menu li {
+	display:inline;
+	list-style:none;
+	margin-right:0.5em;
+}
+.inline_right ul.menu li {
+	display:inline;
+	list-style:none;
+	margin-left:0.5em;
+}
+
+/* Utility */
+.clearfixafter {
+	content: '\0020';
+	display: block;
+	clear: left;
+	height: 0;
+	overflow: hidden;
+}
