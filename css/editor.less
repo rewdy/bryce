@@ -26,42 +26,8 @@ as there is a lot of overlap between the two.
 
 */
 
-@background: #fff;
-@footer: #3c3c3c;
-
-@color: #333;
-@lighttext: #999; // ?
-
-@accent: #d4443f;
-@pop: #00a99c;
-@lightaccent: #f2f2f2;
-@linecolor: #ddd;
-
-@linkcolor: @accent;
-@linkhover: #000;
-
-@selection: @pop;
-
-@font: "Open Sans", sans-serif;
-@fontdisplay: @font;
-@sans: @fontdisplay;
-@size: 1em;
-@fontScale: 1.5; // Used for line-height, margin, etc.
-@lineheight:unit(@fontScale, em);
-@headingDeepest: 6; // Should remain 6 or fewer.
-@headingMultiplier: 1.18;
-
-@menubackgroundcolor: #eee;
-@menulinkcolor: #666;
-@menulinkhover: @accent;
-@menuline: @linecolor;
-@menulighthover: #f2f2f2;
-
-@maxwidth: 1000px;
-@minwidth: 330px;
-@breakpoint1: 58em; // about 800px ~tablets
-@breakpoint2: 40em; // about 640px ~mobile landscape
-@breakpoint: @breakpoint2;
+// Pull in all variables
+@import "vars.less";
 
 /*
 1. Core

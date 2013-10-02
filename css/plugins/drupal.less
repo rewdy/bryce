@@ -118,14 +118,22 @@ ul.tabs {
 
 // feed icon
 a.feed-icon {
-	padding:0 0.2em 0 0;
+	padding:0 0.4em;
 	display:inline-block;
 	font-family:@sans;
 	color:#fff;
 	text-decoration:none;
 	background-color:#ff8e3a;
-	i {
-
+	.transition;
+	&:hover {
+		-webkit-box-shadow:inset 0 0 0.75em rgba(0,0,0,0.3);
+		-moz-box-shadow:inset 0 0 0.75em rgba(0,0,0,0.3);
+		box-shadow:inset 0 0 0.75em rgba(0,0,0,0.3);
+	}
+	@media only screen and (min-width:@breakpoint2) {
+		position:absolute;
+		top:1.25em;
+		right:(@gutter/2);
 	}
 }
 
@@ -159,14 +167,14 @@ a.more_link,
 	display:inline-block;
 	padding:0.5em 0.8em;
 	font-family:@fontdisplay;
-	font-weight:bold;
+	font-weight:400;
 	text-transform:uppercase;
 	text-decoration:none;
 	background-color:@lightaccent;
 	color:@lighttext;
 	box-shadow:1px 1px 0 #b6b6b6;
 	&:hover {
-		color: darken(@pop, 5%);
+		color:@pop;
 	}
 }
 a.more_link:after,

@@ -26,19 +26,38 @@ p.attn {
 
 ul.lined,
 ol.lined {
-	border-top: 1px solid #ddd;
+	border-top: 1px solid @linecolor;
 }
 ul.lined li {
 	list-style: none;
 	margin:0;
 	padding:0.4em;
-	border-bottom:1px solid #ddd;
+	border-bottom:1px solid @linecolor;
 }
 ol.lined li {
 	list-style-position: inside;
 	margin:0;
 	padding:0.4em;
-	border-bottom:1px solid #ddd;
+	border-bottom:1px solid @linecolor;
+}
+
+// a few classes mostly aimed at field output
+div.lined {
+	padding-top:1em;
+	border-top:1px solid @linecolor;
+}
+div.box,
+.code-block {
+	padding:1em;
+	margin-bottom:@lineheight;
+	background-color:@lightaccent;
+	p:last-child {
+		margin-bottom:0;
+	}
+}
+
+.code-block {
+	white-space:pre;
 }
 
 i.space {
@@ -57,6 +76,22 @@ img.left {
 }
 table.narrow {
 	width: auto;
+}
+
+.show-mobile {
+	display:none;
+}
+@media only screen and (max-width:@breakpoint2) {
+	.show-mobile {
+		display:block;
+	}
+	span.show-mobile,
+	i.show-mobile {
+		display:inline;
+	}
+	.show-big {
+		display:none;
+	}
 }
 
 .hide {

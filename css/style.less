@@ -4,6 +4,7 @@ Stylesheet
 ----------
 
 Project:	Rewdy 5
+Title:		Primary Stylesheet
 Date:		00/00/2013
 
 ----------
@@ -19,48 +20,10 @@ Table of Contents
 
 ----------
 
-Directions: Use either the drupal prefixed plugins or the no prefix plugins. Don't use both
-as there is a lot of overlap between the two.
-
-----------
-
 */
 
-@background: #fff;
-@footer: #e6e6e6;
-
-@color: #333;
-@lighttext: #999;
-
-@accent: #2c8d6b;
-@pop: #ef5532;
-@lightaccent: #f2f2f2;
-@linkcolor: @accent;
-@linkhover: @pop;
-
-@linecolor: #ddd;
-@selection: @pop;
-
-@font: "Open Sans", sans-serif;
-@fontdisplay: @font;
-@sans: @fontdisplay;
-@size: 1em;
-@fontScale: 1.5; // Used for line-height, margin, etc.
-@lineheight:unit(@fontScale, em);
-@headingDeepest: 6; // Should remain 6 or fewer.
-@headingMultiplier: 1.18;
-
-@menubackgroundcolor: @lightaccent;
-@menulinkcolor: #999;
-@menulinkhover: @accent;
-@menuline: @linecolor;
-@menulighthover: #f2f2f2;
-
-@maxwidth: 1000px;
-@minwidth: 330px;
-@breakpoint1: 58em; // about 800px ~tablets
-@breakpoint2: 40em; // about 640px ~mobile landscape
-@breakpoint: @breakpoint2;
+// Pull in all variables
+@import "vars.less";
 
 /*
 1. Core
@@ -70,7 +33,6 @@ as there is a lot of overlap between the two.
 // pull in core, type, and form plugins
 @import "plugins/core.less";
 @import "plugins/type.less";
-//@import "plugins/forms.less";
 @import "plugins/drupal-forms";
 
 body {
@@ -139,12 +101,16 @@ header#site_header {
 
 // Main Content Row
 #main-row {
-	padding:3em 1em;
+	padding:3em 0;
+}
+
+header#page-header {
+	position:relative;
 }
 
 // Footer
 footer {
-	padding:2em 1em;
+	padding:2em 0;
 	font-family:@sans;
 	a {
 		color:#ccc;
@@ -240,10 +206,67 @@ footer {
 	}
 }
 
+@import "plugins/prism.less";
+
 /*
 4. Theme
 --------
 */
+
+.block-link a {
+	display:block;
+	padding:0.75em 0.5em;
+	text-align:center;
+	color:#fff;
+	background: @accent;
+	text-decoration:none;
+	border: solid darken(@accent, 10%);
+	border-width:0 0 2px 0;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	&:active {
+		border-width:0;
+		position:relative;
+		margin-top:2px;
+	}
+}
+.node-teaser {
+	border-bottom:1px solid @linecolor;
+	margin-bottom:@lineheight;
+}
+
+.project,
+.lab {
+	margin-bottom:2em;
+	.card {
+		padding:0.5em 1em;
+		border:2px solid @color;
+		background-color:#fff;
+		p:last-child {
+			margin-bottom:0;
+		}
+	}
+	h2 {
+		font-size:1em;
+		font-weight:700;
+		text-align:center;
+	}
+	&.g4:nth-child(3n+1) {
+		clear:left;
+	}
+}
+
+// labs
+.field-name-lab-embedded {
+	padding:1em;
+	margin-bottom:@lineheight;
+	border:1px solid @linecolor;
+}
+
+#comments h2 {
+	text-align:center;
+}
 
 // Basic for image layout
 img {
@@ -251,6 +274,9 @@ img {
 	height:auto;
 }
 
+i[class^=icon] {
+	margin-right:0.2em;
+}
 
 /*
 5. State

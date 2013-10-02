@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .headingLoop(@headingDeepest);
 
-h1#page-title, .listing h2 {
+h1#page-title, .node-teaser h2 {
 	text-align:center;
 	font-weight:700;
 }
@@ -75,14 +75,10 @@ blockquote {
 	line-height:@lineheight;
 	background-color: lighten(@accent, 60%);
 }
-code, pre {
-	font-size:1.15em;
-	padding:0.2em;
-	background-color: lighten(@accent, 60%);
-}
 pre {
 	padding:0.5em 0.8em;
 	white-space: pre-wrap;
+	font-size:0.9em;
 }
 
 hr {
