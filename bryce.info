@@ -7,10 +7,11 @@ engine = phptemplate
 
 ; STYLESHEETS
 stylesheets[all][] = css/style.css
-stylesheets[all][] = font/font-awesome-plus.css
+stylesheets[all][] = font/font-awesome.min.css
 
 ; SCRIPTS
 scripts[] = js/global.js
+scripts[] = js/prism.js
 
 ; REGIONS
 ;-- Primary Regions
