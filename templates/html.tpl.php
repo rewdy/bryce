@@ -46,9 +46,11 @@
 ?><!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 
-	<head profile="<?php print $grddl_profile; ?>">
+	<head>
 		<?php print $head; ?>
 		<title><?php print $head_title; ?></title>
+
+		<link rel="profile" href="<?php print $grddl_profile; ?>" />
 
 		<!-- Styles -->
 		<?php print $styles; ?>
