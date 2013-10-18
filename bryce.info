@@ -13,6 +13,9 @@ stylesheets[all][] = font/font-awesome.min.css
 scripts[] = js/global.js
 scripts[] = js/prism.js
 
+; PANELS LAYOUTS
+plugins[panels][layouts] = layouts
+
 ; REGIONS
 ;-- Primary Regions
 regions[preamble] = Preamble
