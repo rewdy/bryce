@@ -17,7 +17,9 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-
+<?php if (path_is_admin(current_path())) : ?>
+<div class="grid">
+<?php endif; ?>
 <div <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?> class="row">
 	<div class="g6">
 		<?php print $content['left']; ?>
@@ -26,3 +28,6 @@
 		<?php print $content['right']; ?>
 	</div>
 </div>
+<?php if (path_is_admin(current_path())) : ?>
+</div>
+<?php endif; ?>
