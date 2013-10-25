@@ -14,6 +14,7 @@ h3{font-size:1.643em}
 h2{font-size:1.939em}
 h1{font-size:2.288em}
 h1#page-title,.node-teaser h2{text-align:center;font-weight:700}
+.front h2{padding-bottom:.33em;font-weight:700;border-bottom:2px solid #333}
 h3{color:#999;font-style:italic;font-weight:300}
 p,ul,ol,blockquote,pre,table{margin:0 0 1.5em 0}
 ul li,ol li{margin-left:3em}
@@ -49,7 +50,7 @@ fieldset legend{display:inline-block;text-transform:uppercase;font-weight:600;ba
 fieldset.collapsible legend a{color:inherit;text-decoration:none}fieldset.collapsible legend a:hover{color:#2c8d6b}
 fieldset.collapsible legend a:after{content:' \25B2';display:inline-block;padding-left:1em;font-size:.6em}
 fieldset.collapsible.collapsed legend a:after{content:' \25BC'}
-@media only screen and (max-width:40em){input[type=text],input[type=password],input.long{width:96%} input.narrow{width:43%}}body{background-color:#e6e6e6;color:#999}
+@media only screen and (max-width:40em){input[type=text],input[type=password],input.long{width:96%} input.narrow{width:43%}}body{background:#e6e6e6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAoAgMAAAAUDpWSAAAAA3NCSVQICAjb4U/gAAAACVBMVEXl5eXn5+fp6elDLj/zAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHnRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1LjGrH0jrAAAAFnRFWHRDcmVhdGlvbiBUaW1lADEwLzI1LzEzH3skVwAAAdNJREFUKJEdUkEKBDEIU9C7gv2PBb1baP//lc0sFDp1otFEOkXPjEQjh5cRUQ8xe94zRk+GFo0p7swrI+lBrlFKpEBOslTTlO00xIkeU7m+FkBCOHkOgpfAQS+ZdcrBklqIL+pk703SXPbS86GERKtJTQN39kLpRc7SSKVNVtkUuAD80MPmqWKLaL8+eLP45qylXOX4kUrqxGFqZcKbfZ9Mp6uST2q92ph3Cds2mpGbNahQlXjW7iReaGQ4NcUJh0U+ZjER9RC1vPQJkoDlPkg0gWzhtWjj3IiD8mrGyCqIlgRFSXUxoSHrjcEY4wkTdDHkcx+ngS10jj1O6S7zylXBbpTo8l5o/ViOC6GnRzqwSMjpM+xGSdUFzQIetoyBMdh4Cd2zezb4oNSCG+rmZLPmlkUL17a1nRxeNWpUsS4Lo30svy3JJV4YBTakcm65EOSGgjC3pSul6Q2wczvQIQb4CtrfRKYneelSCdXo4G/rsAMbTYzEJxlo5VOIBOL7QNEIuOf5zTdhz1AR3YnOt2iPxtHZxYqYumOl4SF0YH1YlkIsTHTPhcADp6JrgrnRn7/3D45CNSzCzmJOlwS/wg2e6LaK81k+SX3hNtPDVOPxffP6AVtXaW+wsT+lAAAAAElFTkSuQmCC);color:#999}
 #jump_nav a{display:block;padding:.5em;background-color:#2c8d6b;position:fixed;z-index:1000;top:-5em;left:40%;width:20%;text-align:center;font-family:"Open Sans",sans-serif;font-weight:bold;color:#fff}
 #jump_nav a:focus{top:0}
 #wrapper.blocked{margin:0 auto 3em auto;max-width:1000px}
@@ -103,7 +104,7 @@ fieldset.collapsible.collapsed legend a:after{content:' \25BC'}
 header#site_header{background-color:#333;background:url(../img/shear-curtain.png) repeat-x center top,url(../img/banners/city-night.jpg) no-repeat center center;padding:15% 0;max-height:40%}
 #main-row{padding:3em 0}
 header#page-header{position:relative}
-footer{padding:2em 0;font-family:"Open Sans",sans-serif}footer a{color:#ccc}footer a:hover{color:#fff}
+footer{border-top:1px solid #ddd;padding:2em 0;font-family:"Open Sans",sans-serif}footer a{color:#333}footer a:hover{color:#ef5532}
 .flip_area{width:300px;height:90px;position:relative;margin:0 auto;-webkit-perspective:600px;-moz-perspective:600px;-o-perspective:600px;perspective:600px}
 #card{width:100%;height:100%;position:absolute;-webkit-transition:-webkit-transform .5s;-moz-transition:-moz-transform .5s;-o-transition:-o-transform .5s;transition:transform .5s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-o-transform-style:preserve-3d;transform-style:preserve-3d}#card:hover{-webkit-transform:rotateX(180deg);-moz-transform:rotateX(180deg);-o-transform:rotateX(180deg);transform:rotateX(180deg)}
 #card .face{display:block;height:100%;width:100%;text-align:center;position:absolute;line-height:90px;font-size:20px;color:#333;text-transform:uppercase;background-color:#fff;border:2px solid #333;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden}
@@ -175,7 +176,8 @@ pre[class*="language-"]::selection,pre[class*="language-"] ::selection,code[clas
 .token.entity{cursor:help}
 .token a{color:inherit}
 .block-link a{display:block;padding:.75em .5em;text-align:center;color:#fff;background:#2c8d6b;text-decoration:none;border:solid #20664e;border-width:0 0 2px 0;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}.block-link a:active{border-width:0;position:relative;margin-top:2px}
-.node-teaser{border-bottom:1px solid #ddd;margin-bottom:1.5em}
+.node-teaser{border-top:1px solid #ddd;padding-top:1.5em}
+.field-name-post-date{margin-bottom:1.5em;text-align:center;color:#999}
 .project,.lab{margin-bottom:2em}.project .card,.lab .card{padding:.5em 1em;border:2px solid #333;background-color:#fff}.project .card p:last-child,.lab .card p:last-child{margin-bottom:0}
 .project h2,.lab h2{font-size:1em;font-weight:700;text-align:center}
 .project.g4:nth-child(3n+1),.lab.g4:nth-child(3n+1){clear:left}
@@ -193,6 +195,8 @@ p.attn{font-style:italic;color:#999}
 ul.lined,ol.lined{border-top:1px solid #ddd}
 ul.lined li{list-style:none;margin:0;padding:.4em;border-bottom:1px solid #ddd}
 ol.lined li{list-style-position:inside;margin:0;padding:.4em;border-bottom:1px solid #ddd}
+ul.link_list li a,ol.link_list li a{display:block;font-size:1.25em;line-height:1.7em;color:#999;text-decoration:none}ul.link_list li a:hover,ol.link_list li a:hover{color:#333}
+ul.blocked,ol.blocked{margin:0;padding:0}ul.blocked li,ol.blocked li{margin:.75em 0;padding:0;list-style:none}
 ul.inline,ol.inline{margin:0 0 1.5em 0;padding:0}ul.inline li,ol.inline li{margin:0;padding:0 .5em 0 0;display:inline}
 div.lined{padding-top:1em;border-top:1px solid #ddd}
 div.box,.code-block{padding:1em;margin-bottom:1.5em;background-color:#f2f2f2}div.box p:last-child,.code-block p:last-child{margin-bottom:0}

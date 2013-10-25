@@ -41,6 +41,30 @@ ol.lined li {
 	border-bottom:1px solid @linecolor;
 }
 
+ul, ol {
+	&.link_list {
+		li a {
+			display:block;
+			font-size:1.25em;
+			line-height:1.7em;
+			color:@lighttext;
+			text-decoration:none;
+			&:hover {
+				color:@color;
+			}
+		}
+	}
+	&.blocked {
+		margin:0;
+		padding:0;
+		li {
+			margin:(@lineheight/2) 0;
+			padding:0;
+			list-style:none;
+		}
+	}
+}
+
 ul.inline,
 ol.inline {
 	margin:0 0 @lineheight 0;

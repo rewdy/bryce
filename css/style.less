@@ -36,7 +36,7 @@ Table of Contents
 @import "plugins/drupal-forms";
 
 body {
-	background-color:@footer; // footer bg color
+	background:#e6e6e6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAoAgMAAAAUDpWSAAAAA3NCSVQICAjb4U/gAAAACVBMVEXl5eXn5+fp6elDLj/zAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHnRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1LjGrH0jrAAAAFnRFWHRDcmVhdGlvbiBUaW1lADEwLzI1LzEzH3skVwAAAdNJREFUKJEdUkEKBDEIU9C7gv2PBb1baP//lc0sFDp1otFEOkXPjEQjh5cRUQ8xe94zRk+GFo0p7swrI+lBrlFKpEBOslTTlO00xIkeU7m+FkBCOHkOgpfAQS+ZdcrBklqIL+pk703SXPbS86GERKtJTQN39kLpRc7SSKVNVtkUuAD80MPmqWKLaL8+eLP45qylXOX4kUrqxGFqZcKbfZ9Mp6uST2q92ph3Cds2mpGbNahQlXjW7iReaGQ4NcUJh0U+ZjER9RC1vPQJkoDlPkg0gWzhtWjj3IiD8mrGyCqIlgRFSXUxoSHrjcEY4wkTdDHkcx+ngS10jj1O6S7zylXBbpTo8l5o/ViOC6GnRzqwSMjpM+xGSdUFzQIetoyBMdh4Cd2zezb4oNSCG+rmZLPmlkUL17a1nRxeNWpUsS4Lo30svy3JJV4YBTakcm65EOSGgjC3pSul6Q2wczvQIQb4CtrfRKYneelSCdXo4G/rsAMbTYzEJxlo5VOIBOL7QNEIuOf5zTdhz1AR3YnOt2iPxtHZxYqYumOl4SF0YH1YlkIsTHTPhcADp6JrgrnRn7/3D45CNSzCzmJOlwS/wg2e6LaK81k+SX3hNtPDVOPxffP6AVtXaW+wsT+lAAAAAElFTkSuQmCC); // footer bg color
 	color:#999; // footer text color
 }
 #jump_nav a {
@@ -110,12 +110,13 @@ header#page-header {
 
 // Footer
 footer {
+	border-top:1px solid @linecolor;
 	padding:2em 0;
 	font-family:@sans;
 	a {
-		color:#ccc;
+		color:@color;
 		&:hover {
-			color:#fff;
+			color:@pop;
 		}
 	}
 }
@@ -232,8 +233,13 @@ footer {
 	}
 }
 .node-teaser {
-	border-bottom:1px solid @linecolor;
+	border-top:1px solid @linecolor;
+	padding-top:@lineheight;
+}
+.field-name-post-date {
 	margin-bottom:@lineheight;
+	text-align:center;
+	color:@lighttext;
 }
 
 .project,
