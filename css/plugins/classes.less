@@ -43,14 +43,21 @@ ol.lined li {
 
 ul, ol {
 	&.link_list {
-		li a {
-			display:block;
-			font-size:1.25em;
-			line-height:1.7em;
-			color:@lighttext;
-			text-decoration:none;
-			&:hover {
-				color:@color;
+		li {
+			border-bottom:1px solid @linecolor;
+			margin:0;
+			padding:0;
+			a {
+				display:block;
+				padding:0.25em 0;
+				font-size:1.2em;
+				line-height:1.5em;
+				font-weight:300;
+				color:@lighttext;
+				text-decoration:none;
+				&:hover {
+					color:@color;
+				}
 			}
 		}
 	}
@@ -58,9 +65,34 @@ ul, ol {
 		margin:0;
 		padding:0;
 		li {
-			margin:(@lineheight/2) 0;
-			padding:0;
+			margin:0;
+			padding:(@lineheight/4) 0;
 			list-style:none;
+		}
+	}
+}
+.pill_link_list ul,
+ul.pill_link_list {
+	margin:0 0 @lineheight 0;
+	padding:0;
+	li {
+		display:inline;
+		margin:0;
+		padding:0;
+		a {
+			display:inline-block;
+			padding:0 0.75em;
+			margin:0 0.5em 0.5em 0;
+			background-color:#f2f2f2;
+			text-decoration:none;
+			border:2px solid #f2f2f2;
+			-webkit-border-radius:1em;
+			-moz-border-radius:1em;
+			border-radius:1em;
+			&:hover {
+				color:@color;
+				border-color:@color;
+			}
 		}
 	}
 }
