@@ -71,71 +71,104 @@
 
 $theme_path = $base_path . $directory;
 
-?>
-	<div id="jump_nav"><a href="#content">Skip to Content</a></div>
-	<div id="wrapper">
+?><!DOCTYPE html>
+<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
+
+	<head>
+		<?php print $head; ?>
+		<title><?php print $head_title; ?></title>
+
+		<link rel="profile" href="<?php print $grddl_profile; ?>" />
+
+		<!-- Styles -->
+		<?php print $styles; ?>
 		
-		<header id="site_header" class="row style-simple-center">
-			<div class="grid">
-				<div class="full center">
-					<?php $title_tag = ($title) ? 'div' : 'h1'; ?>
-					<<?php echo $title_tag; ?> id="site-title">
-						<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+		<!-- IE Styles -->
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" href="<?php echo $theme_path; ?>/css/style-ie.css">
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if IE 7]>
+		<link rel="stylesheet" href="<?php echo $theme_path; ?>/font/font-awesome-plus-ie7.css">
+		<![endif]-->
+
+		<?php print $scripts; ?>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	</head>
+
+	<body class="<?php print $classes; ?>" <?php print $attributes;?>>
+		 
+		<div id="jump_nav"><a href="#content">Skip to Content</a></div>
+		<div id="wrapper">
+			
+			<header id="site_header" class="row style-simple-center">
+				<div class="flip_area">
+					<a id="card" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+						<?php $title_tag = ($title) ? 'div' : 'h1'; ?>
+						<<?php echo $title_tag; ?> id="site_title" class="face front">
 							<?php if ($logo): ?><span id="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></span><?php endif; ?>
 
 							<span id="site-title-text"><?php print $site_name; ?></span>
-						</a>
-					</<?php echo $title_tag; ?>>
+						</<?php echo $title_tag; ?>>
+						<span class="face back"><i class="icon-home space"></i> home</span>
+					</a>
+				</div>
+			</header>
+
+			<?php if ($main_menu): ?>
+			<nav id="main-menu" class="row">
+				<div class="grid">
+					<div class="full center">
+					<?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu-list', 'class' => array('menu')), 'heading' => t('Main menu'))); ?>
+					</div>
+				</div>
+			</nav> <!-- /nav#main-menu -->
+			<?php endif; ?>
+
+			<div id="main-row" class="row">
+				<div class="grid">
+
+					<header id="page-header" class="full">
+						<?php print render($title_prefix); ?>
+
+						<?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
+						
+						<?php print render($title_suffix); ?>
+
+						<?php print $feed_icons; ?>
+
+						<?php print render($page['help']); ?>
+
+					</header>
+
+					<div id="content" class="<?php echo $grid['content_grid_class']; ?> center">
+
+						<a id="main-content"></a>
+
+						<?php print $content; ?>
+
+					</div> <!-- /div#content -->
+
 				</div>
 			</div>
-		</header>
+		</div> <!-- close #wrapper -->
+		
+		<?php if ($google_analytics_site_id) :?>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', '<?php echo $google_analytics_site_id; ?>']);
+			_gaq.push(['_trackPageview']);
 
-		<?php if ($main_menu): ?>
-		<nav id="main-menu" class="row">
-			<div class="grid">
-				<div class="full center">
-				<?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu-list', 'class' => array('menu')), 'heading' => t('Main menu'))); ?>
-				</div>
-			</div>
-		</nav> <!-- /nav#main-menu -->
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<?php endif; ?>
 
-		<div id="main-row" class="row">
-			<div class="grid">
-				
-				<?php if ($messages!=''): ?>
+	</body>
 
-				<div id="messages">
-					<?php print $messages; ?>
-				</div>
-				<?php endif; ?>
-
-				<?php if ($breadcrumb && $show_breadcrumbs): ?>
-
-				<div id="breadcrumbs"><?php print $breadcrumb; ?></div>
-				<?php endif; ?>
-
-				<header id="page-header" class="full">
-					<?php print render($title_prefix); ?>
-
-					<?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
-					<?php print render($title_suffix); ?>
-
-					<?php if ($tabs): ?><div class="tabs_holder"><?php print render($tabs); ?></div><?php endif; ?>
-
-					<?php print render($page['help']); ?>
-
-				</header>
-
-				<div id="content" class="full">
-
-					<a id="main-content"></a>
-
-					<?php print render($page['content']); ?>
-
-					<?php print $feed_icons; ?>
-
-				</div> <!-- /div#content -->
-
-			</div>
-		</div>
-	</div> <!-- close #wrapper -->
+</html>
