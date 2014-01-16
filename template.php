@@ -20,6 +20,12 @@ function bryce_preprocess(&$vars, $hook) {
 			$vars['google_analytics_site_id'] = false;
 		}
 
+		/**
+		 * Add Webfont
+		*/
+
+		drupal_add_css('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700,600', array('type' => 'external'));
+
 		/* CSS Classes to Remove
 		 * ---------------------
 		*/
