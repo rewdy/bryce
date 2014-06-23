@@ -196,7 +196,7 @@ ul.lined,ol.lined{border-top:1px solid #ddd}
 ul.lined li{list-style:none;margin:0;padding:.4em;border-bottom:1px solid #ddd}
 ol.lined li{list-style-position:inside;margin:0;padding:.4em;border-bottom:1px solid #ddd}
 ul.link_list li,ol.link_list li{border-bottom:1px solid #ddd;margin:0;padding:0}ul.link_list li a,ol.link_list li a{display:block;padding:.25em 0;font-size:1.2em;line-height:1.5em;font-weight:300;color:#999;text-decoration:none}ul.link_list li a:hover,ol.link_list li a:hover{color:#333}
-ul.blocked,ol.blocked{margin:0;padding:0}ul.blocked li,ol.blocked li{margin:0;padding:.375em 0;list-style:none}
+ul.blocked,ol.blocked{margin:0 0 1.5em 0;padding:0}ul.blocked li,ol.blocked li{margin:0;padding:.375em 0;list-style:none}
 .pill_link_list ul,ul.pill_link_list{margin:0 0 1.5em 0;padding:0}.pill_link_list ul li,ul.pill_link_list li{display:inline;margin:0;padding:0}.pill_link_list ul li a,ul.pill_link_list li a{display:inline-block;padding:0 .75em;margin:0 .5em .5em 0;background-color:#f2f2f2;text-decoration:none;border:2px solid #f2f2f2;-webkit-border-radius:1em;-moz-border-radius:1em;border-radius:1em}.pill_link_list ul li a:hover,ul.pill_link_list li a:hover{color:#333;border-color:#333}
 ul.inline,ol.inline{margin:0 0 1.5em 0;padding:0}ul.inline li,ol.inline li{margin:0;padding:0 .5em 0 0;display:inline}
 div.lined{padding-top:1em;border-top:1px solid #ddd}
